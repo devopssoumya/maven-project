@@ -44,7 +44,7 @@ pipeline {
 
                 timeout(time:5, unit:'DAYS'){
 
-                    input message:'Approve PRODUCTION Deployment?'
+                    input message:'Approve prod Deployment?'
 
                 }
 
@@ -58,7 +58,7 @@ pipeline {
 
                 success {
 
-                    echo 'Code deployed to Production.'
+                    echo 'Code deployed to Prod.'
 
                 }
 

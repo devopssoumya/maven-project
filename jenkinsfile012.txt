@@ -8,7 +8,7 @@ pipeline {
 
             steps {
 
-                sh 'mvn -DskipTests=true clean package'
+                sh 'mvn clean package'
 
             }
 
@@ -26,11 +26,11 @@ pipeline {
 
         }
 
-        stage ('Deploy to Staging'){
+        stage ('deploy-to-staginglatest'){
 
             steps {
 
-                build job: 'Deploy-to-stg'
+                build job: 'deploy-to-staginglatest'
 
             }
 
@@ -38,7 +38,7 @@ pipeline {
 
 
 
-        stage ('Deploy to Production'){
+        stage ('deploy-to-Prod'){
 
             steps{
 
@@ -50,7 +50,7 @@ pipeline {
 
 
 
-                build job: 'Deploy-to-Prod'
+                build job: 'deploy-to-Prod'
 
             }
 

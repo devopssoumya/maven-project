@@ -2,7 +2,11 @@ pipeline {
 
     agent any
 
-    stages{
+  parameters {
+   choice(choices: ['DEV', 'TST', 'STG', 'PRD'], description: 'Environment', name: 'ENV')
+  }
+  
+  stages{
 
         stage('Build'){
 
